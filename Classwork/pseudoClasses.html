@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Pseudo Classes</title>
+    <style>
+      h3 {
+        text-align: center;
+      }
+      .container {
+        display: flex;
+        flex-wrap: wrap;
+      }
+
+      /*DO NOT CHANGE .box Default Styling*/
+      .box {
+        padding: 5px;
+        display: inline-block;
+        flex-basis: calc(20% - 16px);
+        height: 150px;
+        margin: 2px;
+        border: 1px solid black;
+        border-radius: 5px;
+      }
+      .box:hover {
+        box-shadow: 2px 2px 10px 10px rgb(15, 101, 15);
+      }
+      .box:nth-child(1n+3):nth-child(-1n+8) {
+        background-color: orange;
+      }
+      .box:first-child {
+        background-color: red;
+      }
+      .box:last-child {
+        background-color: green;
+      }
+      .box:not(:nth-child(6)) {
+        color: white;
+      }
+      /* Start at element 2, then go up by 7. This would also get the next 7 after that, etc... */
+      .box:nth-child(7n+2) {
+        background-color: blue;
+      }
+
+      /*You will use each of these pseudo-classes the following amount of times:*/
+      /*:first-child - DONE 1x*/
+      /*:last-child - DONE 1x*/
+      /*:nth-child() 1x*/
+      /*:nth-child():nth-child() - DONE 1x*/
+      /*:not(:nth-child()) - DONE 1x*/
+      /*:hover 1x - DONE*/
+
+      /*:nth-child(an+b) 
+      Step size | integers starting at 0 | integer offset
+      
+      Examples
+      :nth-child(5n) - 5 times 0, 5 times 1, 5 times 2, 5 times 3, etc...
+            
+      */
+      
+    </style>
+  </head>
+
+  <body>
+    <h3>
+      Style the boxes below as described WITHOUT adding any new classes or ids
+      or changing the default .box styling see comments in style tag for
+      instructions.
+    </h3>
+    <div class="container">
+      <div class="box">
+        <ul>
+          <li>Background-color: Red</li>
+          <li>Color: White</li>
+          <li>hover: green box-shadow</li>
+        </ul>
+      </div>
+      <div class="box">
+        <ul>
+          <li>Background-color: Blue</li>
+          <li>Color: White</li>
+          <li>hover: green box-shadow</li>
+        </ul>
+      </div>
+      <div class="box">
+        <ul>
+          <li>Background-color: Orange</li>
+          <li>Color: White</li>
+          <li>hover: green box-shadow</li>
+        </ul>
+      </div>
+      <div class="box">
+        <ul>
+          <li>Background-color: Orange</li>
+          <li>Color: White</li>
+          <li>hover: green box-shadow</li>
+        </ul>
+      </div>
+      <div class="box">
+        <ul>
+          <li>Background-color:Orange</li>
+          <li>Color: White</li>
+          <li>hover: green box-shadow</li>
+        </ul>
+      </div>
+      <div class="box">
+        <ul>
+          <li>Background-color: Orange</li>
+          <li>Color: Black</li>
+          <li>hover: green box-shadow</li>
+        </ul>
+      </div>
+      <div class="box">
+        <ul>
+          <li>Background-color: Orange</li>
+          <li>Color: White</li>
+          <li>hover: green box-shadow</li>
+        </ul>
+      </div>
+      <div class="box">
+        <ul>
+          <li>Background-color: Orange</li>
+          <li>Color: White</li>
+          <li>hover: green box-shadow</li>
+        </ul>
+      </div>
+      <div class="box">
+        <ul>
+          <li>Background-color: Blue</li>
+          <li>Color: White</li>
+          <li>hover: green box-shadow</li>
+        </ul>
+      </div>
+      <div class="box">
+        <ul>
+          <li>Background-color: Green</li>
+          <li>Color: White</li>
+          <li>hover: green box-shadow</li>
+        </ul>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,117 @@
+<!-- Below is an example of improper use of DRY Practices, taking what you know, fix the CSS AND the HTML to follow DRY practices-->
+
+<!-- -How to make more reuseable pieces? 
+
+
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>DRY CSS</title>
+    <style>
+      * {
+        color: white;
+      }
+
+      div {
+        display: inline-block;
+        margin: 5px;
+      }
+
+      /* div:nth-child(1n + 6) {
+        width: 150px;
+        height: 150px;
+        line-height: 150px;
+      }
+      div:nth-child(-1n + 5) {
+        height: 200px;
+        width: 200px;
+        line-height: 200px;
+      } 
+      
+      rework this way to make more descriptive:*/
+
+      .small-box {
+        width: 150px;
+        height: 150px;
+        line-height: 150px;
+      }
+      .large-box {
+        height: 200px;
+        width: 200px;
+        line-height: 200px;
+      }
+
+      /* rework to make less repetitive and with more reusable classes: */
+
+      /* .top-heading { */
+        /* text-align: center; */
+        /* background-color: #ffa500; */
+   ÷
+
+      /* .bottom-heading { */
+        /* text-align: right; */
+        /* background-color: #0088ff; */
+      /* } */
+      .div1 {
+        border: 1px solid black;
+        /* text-align: center; */
+        /* background-color: #ffa500; */
+      }
+      .div2 {
+        border: 2px solid red;
+        /* text-align: center; */
+        /* background-color: #ffa500; */
+        /* border-radius: 10px; */
+      }
+      .div3 {
+        border: 2px solid black;
+        /* text-align: center; */
+        /* background-color: #0088ff; */
+        /* border-radius: 10px; */
+      }
+
+      .div4 {
+        /* text-align: right; */
+        /* background-color: #0088ff; */
+      }
+
+      /* --------------------------- */
+
+      .align-center {
+        text-align: center;
+      }
+      .align-right {
+        text-align: right;
+      }
+      .yellow {
+        background-color: #ffa500;
+      }
+      .blue {
+        background-color: #0088ff;
+      }
+      .bradius-10 {
+        border-radius: 10px;
+      }
+
+    </style>
+  </head>
+  <body>
+    <!-- Classes updated to be descriptive. -->
+    <h3 class="align-center yellow">DRY CSS</h3>
+    <div class="div1 large-box align-center yellow">Div 1</div>
+    <div class="div1 large-box align-center yellow">Div 2</div>
+    <div class="div2 large-box align-center yellow bradius-10">Div 3</div>
+    <div class="div2 large-box align-center yellow bradius-10">Div 4</div>
+    <!-- div 5 is the 6th child -->
+    <div class="div3 small-box align-center blue bradius-10">Div 5</div>
+    <div class="div3 small-box align-center blue bradius-10">Div 6</div>
+    <div class="div3 small-box align-center blue bradius-10">Div 7</div>
+    <div class="div4 small-box align-right blue">Div 8</div>
+    <div class="div4 small-box align-right blue">Div 9</div>
+    <div class="div4 small-box align-right blue">Div 10</div>
+    <h3 class="align-right blue">What can we fix?</h3>
+  </body>
+</html>
