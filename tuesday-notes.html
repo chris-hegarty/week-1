@@ -5,6 +5,7 @@
     <meta charset="UTF-8" />
     <title>Different Sizing</title>
     <style>
+        /* ---------BEGIN SIZE OPTIONS--------- */
         div:not(.emWrapper) {
             background-color: blue;
             color: white;
@@ -22,10 +23,17 @@
             width: 10rem;
         }
 
+        /* Dont use 33%.
+        On units that are not evenly divisible, use calc.
+        Example: calc( 100% / 3) */
+
         .byPct {
             /* padding 10 border of 2 */
             width: calc(100% / 3);
         }
+
+        /* You use em to scale something with the font-size.
+        Stack overflow: why em instead of px. */
 
         .byEm {
             width: 10em;

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Positioning</title>
+    <!-- --------Mike: Focus on position fixed.--------------- -->
+    <style>
+        div {
+            background-color: orange;
+            width: 400px;
+            height: 400px;
+        }
+
+        .relative {
+            position: relative;
+            /*position: sticky;*/
+        }
+
+        .absolute {
+            top: 50px;
+            left: 100px;
+            background-color: blue;
+            position: absolute;
+        }
+
+        .fixed {
+            width: 25%;
+            height: 50px;
+            background-color: black;
+            position: fixed;
+        }
+/* These values are -from-. "top" is 100px FROM the top. */
+        .parent {
+            top: 100px;
+            left: 50%;
+            margin-top: 100px;
+        }
+
+        .relative.child {
+            height: 300px;
+            width: 300px;
+            background-color: #FFFF00;
+            top: 50px;
+            left: 100px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="relative parent">
+        <div class="relative child">
+
+        </div>
+    </div>
+
+    <div class="absolute"></div>
+    <div class="fixed"></div>
+
+</body>
+
+</html>
+
+<!-- 
+    
+    You might use these in tables or rankings.
+    
+    :last-child - Last child element of a specific type.
+- :first-child - First child of a specific type.
+- :hover - Only when the user hovers over the element.
+- :nth-child Specific rules for which children to apply the rules to. This can be one of the following patterns:
+- :nth-child(even) or :nth-child(odd) - selects only even or odd children respectively.
+
+Using a calculation. It isn't common. The common usage is to establish a color pattern.
+
+- :nth-child(an+b) - Uses a calculation to select which child(ren) to apply the rules to.
+[Examples](https://developer.mozilla.org/en-US/docs/Web/CSS/:nth-child#Example_selectors)
+
+not operator is commonly used in menus if at all. Just targets super specific use cases.
+
+- :not() - Everything but the specific selector(s) in the parenthesis 
+
+first-of-type - doesnt care if it is the first child. the first ocurence of a div in side its parent should have thi stylinhg.
+
+first-child, last-child...are in the scope of the parent. Can have unintended consequences.
+remember - background default is transparent.
+
+
+
+
+
+-->
