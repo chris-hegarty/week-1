@@ -1,0 +1,17 @@
+/* margin-auto calculates the margin on either side. */
+
+.morning {
+    background-color: khaki;
+}
+
+.afternoon {
+    background-color: palegreen;
+}
+
+.evening {
+    background-color: coral;
+}
+
+.travel {
+    background-color: cornflowerblue;
+}

@@ -6,10 +6,96 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="monday.css">
 </head>
 
 <body>
+    <h1>Schedule</h1>
+    <section class="calendar=">
+        <h2>Calendar</h2>
+        <table>
+            <tr>
+                <th></th>
+                <th>Monday</th>
+                <th>Tuesday</th>
+                <th>Wednesday</th>
+                <th>Thursday</th>
+                <th>Friday</th>
+                <th>Saturday</th>
+                <th>Sunday</th>
+            </tr>
+            <tr>
+                <th>Morning</th>
+                <td class="morning" colspan="5">AM Class</td>
+                <td>Gym</td>
+                <td class="travel" rowspan="2">Road Trip</td>
+            </tr>
+            <tr>
+                <th>Afternoon</th>
+                <td class="afternoon" colspan="5">PM Class</td>
+                <td>Coffee</td>
+                <!-- <td>cell</td> -->
+            </tr>
+            <tr>
+                <th>Evening</th>
+                <td class="evening" colspan="5">Dinner Break</td>
+                <td>Movie</td>
+                <td>Code</td>
+            </tr>
+        </table>
+    </section>
+    <section class="contact-form">
+        <h2>Contact Form</h2>
+        <form id="chris-form">
+            <label for="first-name">First Name</label>
+            <input type="text" id="first-name" name="first-name" placeholder="Enter First Name.">
+            <label for="last-name">Last Name</label>
+            <input type="text" id="last-name" name="last-name" placeholder="Enter Last Name">
+            <label for="email">Email</label>
+            <input type="email" name="email" id="email" placeholder="Enter email address">
 
+            <!-- Checkboxes and radios should have label AFTER the input. -->
+            <h3>I am interested in:</h3>
+            <input type="checkbox" name="interest" id="interest1">
+            <label for="interest1">Web Design</label>
+            <input type="checkbox" name="interest" id="interest2">
+            <label for="interest2">Logo Design</label>
+            <input type="checkbox" name="interest" id="interest3">
+            <label for="interest3">Copywriting</label>
+            <input type="checkbox" name="interest" id="interest4">
+            <label for="interest3">App Development</label>
+
+           <!-- value = Radio, checkbox and selects need values.
+            When this is selected. Used in conjunction with JS. 
+            Need to review what value is doing -->
+            <h3>Client Services</h3>
+
+            <input type="radio" name="client" id="client1" value="client1" checked>
+            <label for="client1">Client 1</label>
+            <input type="radio" name="client" id="client2" value="client2">
+            <label for="client2">Client 2</label>
+            <input type="radio" name="client" id="client3" value="client3">
+            <label for="client3">Client 3</label>
+
+            <h3>Select a Region</h3>
+
+            <label for=""></label>
+            <select name="region" id="region">Select a Region</select>
+            
+            <optgroup>Midwest</optgroup>
+            <option value="Nebraska">Nebraska</option>
+            <option value="Missouri">Missouri</option>
+            <option value="Iowa"></option>
+
+            <optgroup>South</optgroup>
+            <option value="Florida">Florida</option>
+            <option value="Georgia"></option>
+
+            <!-- double check this: -->
+            <input type="submit" value="" accesskey="s">
+
+        </form>
+    </section>
 </body>
 
 </html>
