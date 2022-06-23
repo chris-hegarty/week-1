@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* * {
+            box-sizing: border-box;
+        } */
+
+        /* Create reusable classes for each border side */
+        /* but do a box shadow instead of a border */
+        /* use inset to keep the shadow inside the border */
+        /* then also do a border 1px solid black */
+        .flex {
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .basis-10 {
+            flex-basis: calc( 10% - 2px );
+        }
+        .border-solid {
+            border: 1px solid black;
+        }
+        .border-blur {
+            box-shadow: inset 0px 0px 12px 0px #363535;
+        }
+        .square {
+            aspect-ratio: 1 / 1;
+        }
+        .turquoise {
+            background-color: turquoise;
+        }
+        .lime {
+            background-color: lime;
+        }
+        .yellow {
+            background-color: yellow;
+        }
+        .violet {
+            background-color: violet;
+        }
+        .black {
+            background-color: black;
+        }
+        .blue {
+            background-color: blue;
+        }
+        .peach {
+            background-color: orange;
+        }
+        .red {
+            background-color: red;
+        }
+
+    </style>
+</head>
+<body>
+    <main class="flex">
+        <div class="basis-10 square border-blur border turquoise">box</div>
+        <div class="basis-10 square border-blur turquoise">box</div>
+        <div class="basis-10 square border-blur turquoise">box</div>
+        <div class="basis-10 square border-blur turquoise">box</div>
+        <div class="basis-10 square border lime">box</div>
+        <div class="basis-10 square border yellow">box</div>
+        <div class="basis-10 square border yellow">box</div>
+        <div class="basis-10 square border violet">box</div>
+        <div class="basis-10 square border violet">box</div>
+        <div class="basis-10 square border black">box</div>
+        <div class="basis-10 square border blue">box</div>
+        <div class="basis-10 square border blue">box</div>
+        <div class="basis-10 square border peach">box</div>
+        <div class="basis-10 square border black">box</div>
+        <div class="basis-10 square border lime">box</div>
+        <div class="basis-10 square border lime">box</div>
+        <div class="basis-10 square border red">box</div>
+        <div class="basis-10 square border red">box</div>
+        <div class="basis-10 square border violet">box</div>
+        <div class="basis-10 square border black">box</div>
+        <div class="basis-10 square border blue">box</div>
+        <div class="basis-10 square border blue">box</div>
+        <div class="basis-10 square border peach">box</div>
+        <div class="basis-10 square border peach">box</div>
+        <div class="basis-10 square border peach">box</div>
+        <div class="basis-10 square border lime">box</div>
+        <div class="basis-10 square border black">box</div>
+        <div class="basis-10 square border red">box</div>
+        <div class="basis-10 square border red">box</div>
+        <div class="basis-10 square border peach">box</div>
+    </main>
+</body>
+</html>

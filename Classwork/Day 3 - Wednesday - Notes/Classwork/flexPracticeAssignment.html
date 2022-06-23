@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex Practice Assignment</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Raleway:wght@300&family=Source+Sans+Pro:wght@700&display=swap"
+    rel="stylesheet">
+    <style>
+        * {
+            font-family: "Source Sans Pro", sans-serif;
+        }
+        h2 {
+            text-transform: uppercase;
+        }
+        /* flexbox classes */
+        .flex {
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .column {
+            flex-direction: column;
+        }
+        .center {
+            justify-content: center;
+            align-items: center;
+        }
+        .basis-70pct {
+            flex-basis: 70%;
+        }
+        .basis-30pct {
+            flex-basis: 30%;
+            flex-direction: column;
+        }
+        .order-1 {
+            order: 1;
+        }
+        .order-2 {
+            order: 2;
+        }
+        .order-3 {
+            order: 3;
+        }
+        .order-4 {
+            order: 4;
+        }
+        .order-5 {
+            order: 5;
+        }
+        .order-6 {
+            order: 6;
+        }
+        /* child classes: */
+        .square {
+            min-height: 250px;
+            flex-basis: calc((100% / 3) - 10px);
+        }
+        .width-100 {
+            flex-grow: 1;
+        }
+        /* colors: */
+        .bg-red {
+            background-color: red;
+        }
+        .bg-blue {
+            background-color: blue;
+        }
+        .bg-black {
+            background-color: black;
+        }
+        .text-white {
+            color: white;
+        }
+        .margin-5px {
+            margin: 5px;
+        }
+        .large-numbers {
+            font-size: 60px;
+        }
+    </style>
+</head>
+<body>
+    <header class="flex center bg-black text-white">
+        <h1>HEADER</h1>
+    </header>
+    <main class="flex">
+        <section class="flex basis-70pct">
+            <div class="square bg-blue margin-5px text-white large-numbers flex center">1</div>
+            <div class="square bg-blue margin-5px text-white large-numbers flex center order-3">2</div>
+            <div class="square bg-blue margin-5px text-white large-numbers flex center order-6">3</div>
+            <div class="square bg-blue margin-5px text-white large-numbers flex center order-5">4</div>
+            <div class="square bg-blue margin-5px text-white large-numbers flex center order-4">5</div>
+            <div class="square bg-blue margin-5px text-white large-numbers flex center order-2">6</div>
+        </section>
+        <aside class="flex basis-30pct">
+            <div class="width-100 bg-red margin-5px text-white large-numbers flex center order-3">1</div>
+            <div class="width-100 bg-red margin-5px text-white large-numbers flex center order-1">2</div>
+            <div class="width-100 bg-red margin-5px text-white large-numbers flex center order-2">3</div>
+        </aside>
+    </main>
+    <footer class="flex center bg-black text-white">
+        <h2>Footer</h2>
+    </footer>
+</body>
+</html>
